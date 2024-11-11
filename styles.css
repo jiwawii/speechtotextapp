@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    background-color: #F5F5F5;
+}
+
+h2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 5px 5px #C6C6C6;
+    width: 40%;
+    height: 500px;
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+#result {
+    
+    padding: 40px 50px;
+    height: 300px;
+    width: 90%;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 5px #C6C6C6;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    min-height: 200px; /* Minimum height to ensure space on load */
+    overflow-y: auto; /* Adds scrolling if text exceeds the container */
+    word-wrap: break-word; /* Ensures long words wrap to the next line */
+    resize: vertical; /* Optional: allows user to resize the box manually */
+}
+
+button{
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #F5F5F5;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 30px;
+    animation: pulse 1.5s infinite alternate;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #010101;
+}
+
+@keyframes pulse {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+/* Media Query for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        height: auto; /* Adjust height to fit content */
+        padding: 15px;
+    }
+
+    #result {
+        padding: 30px 20px;
+        height: 250px;
+    }
+
+    button {
+        font-size: 18px;
+        height: 45px;
+        width: 45px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #result {
+        min-height: 150px; /* Set smaller minimum height for mobile */
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 20px;
+    }
+}
